@@ -1,6 +1,6 @@
 from django.conf.urls.defaults import *
 from django.conf import settings
-from wedding.views import news
+from django-project.wedding.views import news
 
 urlpatterns = patterns('',
     (r'^news/$', news),
