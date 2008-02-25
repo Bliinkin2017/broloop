@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Aaron Brice and Maria Llanes Wedding</title>
+        <style type="text/css">
+            @import "/static/css/wedding.css";
+        </style>
+    </head>
+    <body>
+        <div id="nav">
+            <h4>Aaron Brice and Maria Llanes Wedding</h4>
+            <ul>
+                <li><a {% if news %}id="current" {% endif %}href="/news/">News</a></li>
+                <li><a {% if hotels %}id="current" {% endif %}href="/hotels/">Hotels</a></li>
+                <li><a {% if registration %}id="current" {% endif %}href="/registration/">Registration</a></li>
+                <li><a {% if info %}id="current" {% endif %}href="/info/">Info</a></li>
+                <li><a {% if comments %}id="current" {% endif %}href="/comments/">Comments</a></li>
+            </ul>
+        </div>
+        <div id="content">
+            {% block content %}{% endblock %}
+        </div>
+    </body>
+</html>

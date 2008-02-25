@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>News:</h2>
+
+    {% for article in article_list %}
+    <div class="article">
+        {{ article.content }}
+        <div class="author">{{ article.author }}</div>
+        <div class="date">{{ article.date }}</div>
+    </div>
+    {% endfor %}
+{% endblock %}
