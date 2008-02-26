@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>More Information:</h2>
+
+    {% for info in info_list %}
+    <div class="info">
+        <div class="title">{{ info.title }}</div>
+        <div class="content">{{ info.content }}</div>
+        {% if info.url %}
+        <div class="url"><a href="{{ info.url }}">{{ info.url_tag }}</a></div>
+        {% endif %}
+    </div>
+    {% endfor %}
+{% endblock %}

@@ -5,8 +5,9 @@
 
     {% for article in article_list %}
     <div class="article">
-        {{ article.content }}
-        <div class="author">{{ article.author }}</div>
+        <div class="title">{{ article.title }}</div>
+        <div class="content">{{ article.content }}</div>
+        <div class="author">{{ article.user.first_name }}</div>
         <div class="date">{{ article.date }}</div>
     </div>
     {% endfor %}

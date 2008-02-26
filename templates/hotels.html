@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Hotels:</h2>
+
+    {% for hotel in hotel_list %}
+    <div class="hotel">
+        <div class="name">{{ hotel.name }}</div>
+        <div class="rate">${{ hotel.rate }}/night</div>
+        <div class="url"><a href="{{ hotel.url }}">{{ hotel.url }}</a></div>
+        <div class="phone">{{ hotel.phone_number }}</div>
+        <div class="address">{{ hotel.street }}<p/>{{ hotel.city }}, AZ {{ hotel.zip }}</div>
+    </div>
+    {% endfor %}
+{% endblock %}

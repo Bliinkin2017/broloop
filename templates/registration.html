@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Registered at:</h2>
+
+    {% for reg in registration_list %}
+    <div class="registration">
+        <div class="name">{{ reg.name }}</div>
+        <div class="url"><a href="{{ reg.url }}">Registry</a></div>
+    </div>
+    {% endfor %}
+{% endblock %}

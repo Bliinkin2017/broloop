@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Comments:</h2>
+
+    {% for comment in comment_list %}
+    <div class="comment">
+        <div class="content">{{ comment.content }}</div>
+        <div class="signature">By {{ comment.name }} at {{ comment.date }}</div>
+    </div>
+    {% endfor %}
+{% endblock %}

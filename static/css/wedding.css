@@ -73,6 +73,16 @@ body {
     border: 3px ridge #666699;
     padding: 1em;
     margin: 1em;
+    background-color: #eeeeee;
+}
+
+#content .article .title {
+    font-style: italic;
+    font-family: serif;
+    padding-bottom: 0.5em;
+}
+
+#content .article .content {
     font-family: sans-serif;
 }
 
@@ -86,3 +96,80 @@ body {
     font-size: 0.75em;
     font-family: serif;
 }
+
+#content .hotel {
+    border: 3px ridge #666699;
+    padding: 1em;
+    margin: 1em;
+    background-color: #eeeeee;
+}
+
+#content .hotel .name {
+    font-style: italic;
+    padding-bottom: 0.5em;
+}
+
+#content .hotel .url {
+    padding-bottom: 0.5em;
+}
+
+#content .hotel .address {
+    display: inline;
+}
+
+#content .hotel .address p {
+    padding: 0;
+    margin: 0;
+}
+
+#content .registration {
+    border: 3px ridge #666699;
+    padding: 1em;
+    margin: 1em;
+    background-color: #eeeeee;
+}
+
+#content .info {
+    border: 3px ridge #666699;
+    padding: 1em;
+    margin: 1em;
+    background-color: #eeeeee;
+}
+
+#content .info .title {
+    font-style: italic;
+    font-family: serif;
+    padding-bottom: 0.5em;
+}
+
+#content .info .content {
+    font-family: sans-serif;
+    padding-bottom: 0.5em;
+}
+
+#content .info .content p {
+    padding: 0;
+    margin: 0;
+}
+
+#content .info .url {
+    font-family: serif;
+}
+
+#content .comment {
+    border: 3px ridge #666699;
+    padding: 1em;
+    margin: 1em;
+    background-color: #eeeeee;
+}
+
+#content .comment .content {
+    font-family: sans-serif;
+}
+
+#content .comment .signature {
+    padding-top: 1.0em;
+    font-size: 0.75em;
+    font-family: serif;
+}
+
