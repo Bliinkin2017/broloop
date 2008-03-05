@@ -64,8 +64,8 @@ class Info(models.Model):
         verbose_name_plural = "info"
 
 class Comments(models.Model):
-    name = models.CharField(max_length=40)
-    content = models.TextField()
+    name = models.CharField(max_length=40, verbose_name="name")
+    content = models.TextField(verbose_name="comment")
     date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

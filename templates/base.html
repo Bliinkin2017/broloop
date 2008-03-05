@@ -6,18 +6,28 @@
         </style>
     </head>
     <body>
-        <div id="nav">
+        <div id="header">
+            <div class="header-top-left"></div>
+            <div class="header-top-right"></div>
             <h4>Aaron Brice and Maria Llanes Wedding</h4>
+            <div class="header-bottom-left"></div>
+            <div class="header-bottom-right"></div>
+        </div>
+        <div id="nav">
             <ul>
-                <li><a {% if news %}id="current" {% endif %}href="/news/">News</a></li>
-                <li><a {% if hotels %}id="current" {% endif %}href="/hotels/">Hotels</a></li>
-                <li><a {% if registration %}id="current" {% endif %}href="/registration/">Registration</a></li>
-                <li><a {% if info %}id="current" {% endif %}href="/info/">Info</a></li>
-                <li><a {% if comments %}id="current" {% endif %}href="/comments/">Comments</a></li>
+                <li><a {% if news %}id="current" {% endif %}href="/news/"><span>News</span></a></li>
+                <li><a {% if hotels %}id="current" {% endif %}href="/hotels/"><span>Hotels</span></a></li>
+                <li><a {% if registration %}id="current" {% endif %}href="/registration/"><span>Registration</span></a></li>
+                <li><a {% if info %}id="current" {% endif %}href="/info/"><span>Info</span></a></li>
+                <li><a {% if comments %}id="current" {% endif %}href="/comments/"><span>Comments</span></a></li>
             </ul>
         </div>
+        <div class="top-left"></div>
+        <div class="top-right"></div>
         <div id="content">
             {% block content %}{% endblock %}
         </div>
+        <div class="bottom-left"></div>
+        <div class="bottom-right"></div>
     </body>
 </html>

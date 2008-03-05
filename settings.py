@@ -1,6 +1,6 @@
-# Django settings for django-site project.
+# Django settings for mysite project.
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -64,10 +64,10 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.doc.XViewMiddleware',
 )
 
-ROOT_URLCONF = 'django-site.urls'
+ROOT_URLCONF = 'mysite.urls'
 
 TEMPLATE_DIRS = (
-    '/home/aaron/projects/django-site/templates',
+    '/home/aaron/projects/mysite/templates',
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -79,5 +79,5 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.admin',
-    'django-site.wedding',
+    'mysite.wedding',
 )
