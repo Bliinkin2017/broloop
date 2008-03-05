@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 class Newspost(models.Model):
     user = models.ForeignKey(User)
     date = models.DateTimeField(auto_now_add=True)
-    title = models.CharField(max_length=200)
+    title = models.CharField(maxlength=200)
     content = models.TextField()
 
     def __str__(self):
@@ -17,12 +17,12 @@ class Newspost(models.Model):
         ordering = ['-date']
 
 class HotelInfo(models.Model):
-    name = models.CharField(max_length=40)
+    name = models.CharField(maxlength=40)
     phone_number = models.PhoneNumberField()
-    rate = models.DecimalField(max_digits=5,decimal_places=2)
-    street = models.CharField(max_length=40)
-    city = models.CharField(max_length=15)
-    zip = models.CharField(max_length=5)
+    rate = models.FloatField(max_digits=5,decimal_places=2)
+    street = models.CharField(maxlength=40)
+    city = models.CharField(maxlength=15)
+    zip = models.CharField(maxlength=5)
     url = models.URLField()
 
     def __str__(self):
@@ -36,7 +36,7 @@ class HotelInfo(models.Model):
         verbose_name_plural = "hotel info"
 
 class RegistrationInfo(models.Model):
-    name = models.CharField(max_length=40)
+    name = models.CharField(maxlength=40)
     url = models.URLField()
 
     def __str__(self):
@@ -49,9 +49,9 @@ class RegistrationInfo(models.Model):
         verbose_name_plural = "registration info"
 
 class Info(models.Model):
-    title = models.CharField(max_length=200)
+    title = models.CharField(maxlength=200)
     content = models.TextField()
-    url_tag = models.CharField(blank=True, max_length=40)
+    url_tag = models.CharField(blank=True, maxlength=40)
     url = models.URLField(blank=True)
 
     def __str__(self):
@@ -64,7 +64,7 @@ class Info(models.Model):
         verbose_name_plural = "info"
 
 class Comments(models.Model):
-    name = models.CharField(max_length=40, verbose_name="name")
+    name = models.CharField(maxlength=40, verbose_name="name")
     content = models.TextField(verbose_name="comment")
     date = models.DateTimeField(auto_now_add=True)
 
