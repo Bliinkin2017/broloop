@@ -1,14 +1,17 @@
 from django.conf.urls.defaults import *
 from django.conf import settings
-from mysite.wedding.views import news, hotels, registration, info, comments
+from mysite.wedding.views import news, rsvp, hotels, registration, info, comments
 
 urlpatterns = patterns('',
     (r'^$', news),
     (r'^news/$', news),
+    (r'^rsvp/$', rsvp),
     (r'^hotels/$', hotels),
     (r'^registration/$', registration),
     (r'^info/$', info),
-    (r'^comments/$', comments),
+    (r'^comments/$', comments, {'page': 0}),
+    (r'^comments/(?P<page>\d+)/$', comments),
+    (r'^thanks/$', 'direct_to_template', {'template': 'thanks.html'}),
     (r'^admin/', include('django.contrib.admin.urls')),
     # Example:
     # (r'^wedding/', include('wedding.foo.urls')),

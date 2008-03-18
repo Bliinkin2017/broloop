@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>RSVP:</h2>
+    <div>
+        <form dojoType="dijit.form.Form" action="." method="POST">
+            <table>
+                {{ form.as_table }}
+            </table>
+            <div class="submit">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+{% endblock %}
