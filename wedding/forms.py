@@ -32,7 +32,6 @@ class CommentForm(forms.Form):
 
 class RSVPForm(forms.Form):
     name = forms.CharField(widget=DijitText)
-    will_attend = forms.BooleanField(widget=DijitBoolean)
-    num_guests = forms.IntegerField(widget=DijitNumberSpinner)
-    additional_guests = forms.CharField(widget=DijitTextArea)
-
+    will_attend = forms.BooleanField(widget=DijitBoolean, label="Will Attend?", required=False)
+    num_guests = forms.IntegerField(widget=DijitNumberSpinner, required=False, label="Total Number of Guests")
+    additional_guests = forms.CharField(widget=DijitTextArea, required=False, label="Additional Guest Names")

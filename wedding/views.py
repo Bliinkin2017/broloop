@@ -20,7 +20,10 @@ def rsvp(request):
             r.num_guests = form.clean_data['num_guests']
             r.additional_guests = form.clean_data['additional_guests']
             r.save()
-            return HttpResponseRedirect('/thanks/')
+            if r.will_attend:
+                return HttpResponseRedirect('/rsvped/')
+            else:
+                return HttpResponseRedirect('/thanks/')
     else:
         form = RSVPForm()
         template_parms['form'] = form
