@@ -2,10 +2,21 @@
     <head>
         <title>Aaron Brice and Maria Llanes Wedding</title>
         <style type="text/css">
+            @import "/static/js/dojoroot/dijit/themes/tundra/tundra.css";
+            @import "/static/js/dojoroot/dojo/resources/dojo.css";
             @import "/static/css/wedding.css";
         </style>
+        <script type="text/javascript" src="/static/js/dojoroot/dojo/dojo.js" djConfig="parseOnLoad: true"></script>
+        <script type="text/javascript">
+            dojo.require("dojo.parser");
+            dojo.require("dijit.form.Form");
+            dojo.require("dijit.form.TextBox");
+            dojo.require("dijit.form.Textarea");
+            dojo.require("dijit.form.NumberSpinner");
+            dojo.require("dijit.form.CheckBox");
+        </script>
     </head>
-    <body>
+    <body class="tundra">
         <div id="header">
             <div class="header-top-left"></div>
             <div class="header-top-right"></div>
@@ -16,6 +27,7 @@
         <div id="nav">
             <ul>
                 <li><a {% if news %}id="current" {% endif %}href="/news/"><span>News</span></a></li>
+                <li><a {% if rsvp %}id="current" {% endif %}href="/rsvp/"><span>RSVP</span></a></li>
                 <li><a {% if hotels %}id="current" {% endif %}href="/hotels/"><span>Hotels</span></a></li>
                 <li><a {% if registration %}id="current" {% endif %}href="/registration/"><span>Registration</span></a></li>
                 <li><a {% if info %}id="current" {% endif %}href="/info/"><span>Info</span></a></li>

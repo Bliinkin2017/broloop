@@ -78,3 +78,21 @@ class Comments(models.Model):
         ordering = ['-date']
         verbose_name = "comment"
         verbose_name_plural = "comments"
+
+class RSVP(models.Model):
+    name = models.CharField(maxlength=40, verbose_name="name")
+    will_attend = models.BooleanField(verbose_name = "will attend", default=True)
+    num_guests = models.PositiveSmallIntegerField(verbose_name="total number of guests", blank=True, default=0)
+    additional_guests = models.TextField(verbose_name="additional guest names",blank=True)
+    date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return "%s +%s" % (name, num_guests)
+
+    class Admin:
+        pass
+
+    class Meta:
+        verbose_name = "RSVP"
+        verbose_name_plural = "RSVPs"
+

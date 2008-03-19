@@ -9,7 +9,7 @@ body {
 }
 
 #header {
-    background-color: #FFFF99;
+    background-color: #ccccff;
     padding: 0;
     margin: 0.5em 0;
 }
@@ -28,7 +28,7 @@ body {
 }
 
 #nav ul {
-    padding: 3px 0;
+    padding: 0;
     text-align: right;
     margin: 0;
     margin-right: 1em;
@@ -56,8 +56,9 @@ body {
 #nav ul li a span {
     margin:0;
     padding-top: 3px;
+    padding-bottom: 3px;
     padding-right: 10px;
-    background: #ccccff url('/static/images/tab-right.png') right top no-repeat;
+    background: #ccccff url('/static/images/tab-right.png') no-repeat 100% 0%;
 }
 
 #nav ul li a:link {
@@ -78,25 +79,25 @@ body {
 }
 
 #nav ul li a#current {
-    background: #cccccc url('/static/images/current-left.png') left top no-repeat;
-    border-bottom: 1px solid #cccccc;
+    background: #ffdca7 url('/static/images/current-left.png') left top no-repeat;
+    border-bottom: 1px solid #ffdca7;
 }
 
 #nav ul li a#current span {
-    background: #cccccc url('/static/images/current-right.png') right top no-repeat;
+    background: #ffdca7 url('/static/images/current-right.png') right top no-repeat;
 }
 
 #content {
     padding: 1em;
     margin: 0;
-    background-color: #cccccc;
+    background-color: #ffdca7;
 }
 
 #content .article {
-    border: 3px ridge #666699;
+    border: 3px ridge #ffdca7;
     padding: 1em;
     margin: 1em;
-    background-color: #eeeeee;
+    background-color: #efefef;
 }
 
 #content .article .title {
@@ -105,7 +106,8 @@ body {
     padding-bottom: 0.5em;
 }
 
-#content .article .content {
+#content .article .content pre {
+    background-color: #efefef;
     font-family: sans-serif;
 }
 
