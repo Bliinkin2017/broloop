@@ -43,22 +43,20 @@ body {
 }
 
 #nav ul li a {
+    margin-top: -3px;
     padding-top: 3px;
     padding-bottom: 3px;
     padding-left: 10px;
-    margin-left: 3px;
-    border: 1px solid #666699;
-    border-bottom: none;
     background: #ccccff url('/static/images/tab-left.png') left top no-repeat;
     text-decoration: none;
 }
 
 #nav ul li a span {
-    margin:0;
+    margin-top: -3px;
     padding-top: 3px;
     padding-bottom: 3px;
     padding-right: 10px;
-    background: #ccccff url('/static/images/tab-right.png') no-repeat 100% 0%;
+    background: #ccccff url('/static/images/tab-right.png') right top no-repeat;
 }
 
 #nav ul li a:link {
