@@ -23,7 +23,7 @@ class HotelInfo(models.Model):
     street = models.CharField(maxlength=40)
     city = models.CharField(maxlength=15)
     zip = models.CharField(maxlength=5)
-    url = models.URLField()
+    url = models.URLField(blank=True)
 
     def __str__(self):
         return self.name
@@ -51,6 +51,7 @@ class RegistrationInfo(models.Model):
 class Info(models.Model):
     title = models.CharField(maxlength=200)
     content = models.TextField()
+    directions = models.URLField(blank=True)
     url_tag = models.CharField(blank=True, maxlength=40)
     url = models.URLField(blank=True)
 

@@ -7,6 +7,9 @@
     <div class="info">
         <div class="title">{{ info.title }}</div>
         <div class="content"><pre>{{ info.content }}</pre></div>
+        {% if info.directions %}
+        <div class="url"><a href="{{ info.directions }}">Directions</a></div>
+        {% endif %}
         {% if info.url %}
         <div class="url"><a href="{{ info.url }}">{{ info.url_tag }}</a></div>
         {% endif %}
