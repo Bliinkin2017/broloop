@@ -50,17 +50,4 @@ def comments(request, page):
     if paginator.has_previous_page(page):
         template_parms['prev'] = True
 
-    if request.method == 'POST':
-        form = CommentForm(request.POST)
-        template_parms['form'] = form
-        if form.is_valid():
-            # TODO: save form.clean_data['name'] in a cookie?
-            c = Comments()
-            c.name = form.clean_data['name']
-            c.content = form.clean_data['content']
-            c.save()
-            return HttpResponseRedirect('/comments/')
-    else:
-        form = CommentForm()
-        template_parms['form'] = form
     return render_to_response('comments.html', template_parms)

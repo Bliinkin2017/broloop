@@ -2,6 +2,7 @@
 
 {% block content %}
     <h2>Comments:</h2>
+    Comments disabled, the spam people found them..
 
     {% for comment in comment_list %}
     <div class="comment">
@@ -10,26 +11,4 @@
     </div>
     {% endfor %}
 
-    <div id="commentHeader">Leave a comment:</div>
-    <div>
-        <form action="." method="POST">
-            {{ form.name.errors }}
-            <div class="label">
-                {{ form.name.label_tag }}
-            </div>
-            <div class="field">
-                {{ form.name }}
-            </div>
-            {{ form.content.errors }}
-            <div class="label">
-                {{ form.content.label_tag }}
-            </div>
-            <div class="field">
-                {{ form.content }}
-            </div>
-            <div class="submit">
-                <input type="submit" value="Submit">
-            </div>
-        </form>
-    </div>
 {% endblock %}
