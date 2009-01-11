@@ -1,0 +1,6 @@
+This is the code I used for the website for my wedding.  
+
+Written in Django 0.96, mostly because the builtin admin functionality allowed for the bride to make updates easily.
+
+Has tabs for information, links to gift registries, and a form to RSVP on the website.
+
